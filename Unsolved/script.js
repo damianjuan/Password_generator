@@ -1,11 +1,23 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-// prompt for user password requirements
 
 
 
 //generate password
+function generatePassword(){
+  // prompt for user password requirements before running function
+  var passwordLength = window.prompt("How many characters should your password be?");
+    console.log("length:", passwordLength);
+  var capitalReq = window.confirm("Are capital letters required?");
+    console.log("Capital required:", capitalReq);
+  var numberReq = window.confirm("Are numbers required?");
+    console.log("Numbers required:", numberReq);
+  var specialCharReq = window.confirm("Are special characters required? /nex. !@#$%^&*");
+    console.log("Special characters required:", specialCharReq);
+  
+
+};
 
 
 
@@ -16,7 +28,7 @@ function writePassword() {
 
   passwordText.value = password;
 
-}
+};
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
