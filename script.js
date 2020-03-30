@@ -31,33 +31,36 @@ function generatePassword(){
 
   //logic to generate password based off of user's requirements 
   if(passwordLength != null){
+    Array.from(
+      if(capitalReq === true){
+
+      }
+      if(numberReq === true){
     
+      }
+      if(specialCharReq === true){
+    
+      }
+  
+  
+  
+  
+  };
+  
+  
+  
+  // Write password to the #password input
+  function writePassword() {
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
+  
+    passwordText.value = password;
+  
   }
-  if(capitalReq === true){
 
+    )
   }
-  if(numberReq === true){
-
-  }
-  if(specialCharReq === true){
-
-  }
-
-
-
-
-};
-
-
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-};
+  ;
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
