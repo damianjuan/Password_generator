@@ -17,18 +17,37 @@ function generatePassword(){
     console.log("Special characters required:", specialCharReq);
   
   //Arrays holding password elements being lazy and using split
-   var lowerAlphabet = "abcdefghijklmnopqrstuvwxyz";
-   lowerAlphabet.split();
+  var lowerAlphabet = "abcdefghijklmnopqrstuvwxyz";
+    lowerAlphabet.split();
    
-   var capitalAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-   capitalAlphabet.split();
+  var capitalAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    capitalAlphabet.split();
   
-   var numbers = "1234567890";
-   numbers.split();
+  var numbers = "1234567890";
+    numbers.split();
    
-   var specialChar = "!@#$%^&*";
-   specialChar.split();
-   
+  var specialChar = "!@#$%^&*";
+    specialChar.split();
+
+  //logic to generate password based off of user's requirements 
+  if(passwordLength != null){
+    var random = math.random()*passwordLength.length;
+    console.log(random);
+
+  }
+  if(capitalReq === true){
+
+  }
+  if(numberReq === true){
+
+  }
+  if(specialCharReq === true){
+
+  }
+
+
+
+
 };
 
 
