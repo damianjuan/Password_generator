@@ -31,9 +31,7 @@ function generatePassword(){
 
   //logic to generate password based off of user's requirements 
   if(passwordLength != null){
-    var random = math.random()*passwordLength.length;
-    console.log(random);
-
+    
   }
   if(capitalReq === true){
 
