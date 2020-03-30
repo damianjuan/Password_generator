@@ -13,10 +13,22 @@ function generatePassword(){
     console.log("Capital required:", capitalReq);
   var numberReq = window.confirm("Are numbers required?");
     console.log("Numbers required:", numberReq);
-  var specialCharReq = window.confirm("Are special characters required? /nex. !@#$%^&*");
+  var specialCharReq = window.confirm("Are special characters required? ex. !@#$%^&*");
     console.log("Special characters required:", specialCharReq);
   
-
+  //Arrays holding password elements being lazy and using split
+   var lowerAlphabet = "abcdefghijklmnopqrstuvwxyz";
+   lowerAlphabet.split();
+   
+   var capitalAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+   capitalAlphabet.split();
+  
+   var numbers = "1234567890";
+   numbers.split();
+   
+   var specialChar = "!@#$%^&*";
+   specialChar.split();
+   
 };
 
 
