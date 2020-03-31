@@ -9,7 +9,8 @@ function generatePassword(){
   
   // prompt for user password requirements before running function
   var passwordLength = window.prompt("How many characters should your password be?");
-    console.log("length:", passwordLength);
+    passwordLength = Number(passwordLength);  
+  console.log("length:", passwordLength);
   
   var capitalReq = window.confirm("Are capital letters required?");
     console.log("Capital required:", capitalReq);
@@ -36,9 +37,6 @@ function generatePassword(){
   // create array with all password requirement options to random select from 
   var randomPasswordReq = lowerAlphabet;
   
-  // create initial empty array to hold password
-  var password = [];
-
   // add all character options to array to select from when randomly generating password
   if(passwordLength != null){
           
@@ -58,6 +56,17 @@ function generatePassword(){
       
     }
   }
+
+  // create initial empty array to hold password
+  var password = [];
+
+  // select a random element from the randomPasswordReq array and assign it to an index position of password array.
+  for(var i = 0; i < passwordLength; i++ ){
+    password[i] = randomPasswordReq[Math.floor(Math.random()*randomPasswordReq.length)];
+    console.log(password);
+  
+  }
+  
   
 
 
