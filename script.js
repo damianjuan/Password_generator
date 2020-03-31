@@ -40,26 +40,30 @@ function generatePassword(){
   var password = [];
 
   // add all character options to array to select from when randomly generating password
-    if(passwordLength != null){
+  if(passwordLength != null){
           
-        if(capitalReq === true){
-          randomPasswordReq = randomPasswordReq.concat(capitalAlphabet);
-          console.log(randomPasswordReq);
+    if(capitalReq === true){
+      randomPasswordReq = randomPasswordReq.concat(capitalAlphabet);
+      console.log(randomPasswordReq);
 
-        }
-        if(numberReq === true){
-          randomPasswordReq = randomPasswordReq.concat(numbers);
-          console.log(randomPasswordReq);
-      
-        }
-        if(specialCharReq === true){
-          randomPasswordReq = randomPasswordReq.concat(specialChar);
-          console.log(randomPasswordReq);
-      
-        }
-    
     }
+    if(numberReq === true){
+      randomPasswordReq = randomPasswordReq.concat(numbers);
+      console.log(randomPasswordReq);
+      
+    }
+    if(specialCharReq === true){
+      randomPasswordReq = randomPasswordReq.concat(specialChar);
+      console.log(randomPasswordReq);
+      
+    }
+  }
   
+
+
+
+
+
 };
   
   
