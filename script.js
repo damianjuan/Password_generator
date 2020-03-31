@@ -6,56 +6,56 @@ var generateBtn = document.querySelector("#generate");
 
 //generate password
 function generatePassword(){
+  
   // prompt for user password requirements before running function
   var passwordLength = window.prompt("How many characters should your password be?");
     console.log("length:", passwordLength);
+  
   var capitalReq = window.confirm("Are capital letters required?");
     console.log("Capital required:", capitalReq);
+  
   var numberReq = window.confirm("Are numbers required?");
     console.log("Numbers required:", numberReq);
+  
   var specialCharReq = window.confirm("Are special characters required? ex. !@#$%^&*");
     console.log("Special characters required:", specialCharReq);
   
   //Arrays holding password elements being lazy and using split
   var lowerAlphabet = "abcdefghijklmnopqrstuvwxyz";
-    lowerAlphabet.split();
-   
+    lowerAlphabet = lowerAlphabet.split("");
+    console.log(lowerAlphabet);
+
   var capitalAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    capitalAlphabet.split();
+    capitalAlphabet = capitalAlphabet.split("");
+    
   
   var numbers = "1234567890";
-    numbers.split();
+    numbers = numbers.split("");
    
   var specialChar = "!@#$%^&*";
-    specialChar.split();
+    specialChar = specialChar.split("");
 
-  var randomPassword = [];
+  var randomPassword = lowerAlphabet;
 
   //logic to generate password based off of user's requirements 
   if(passwordLength != null){
-    randomPassword.push(lowerAlphabet);
-    console.log(randomPassword);
-      
-    if(capitalReq === true){
-      randomPassword.push(capitalAlphabet);
-      console.log(randomPassword);
+        
+      if(capitalReq === true){
+        randomPassword.concat(capitalAlphabet);
+        console.log(randomPassword);
 
       }
       if(numberReq === true){
-        randomPassword.push(numbers);
-        console.log(randomPassword);
     
       }
       if(specialCharReq === true){
-        randomPassword.push(specialChar);
-        console.log(randomPassword);
     
       }
   
-  
-  
-  
-  };
+  }else{
+    window.alert("enter a valid password length");
+  }
+};
   
   
   
@@ -69,8 +69,8 @@ function generatePassword(){
   }
 
     
-  }
-  ;
+  
+  
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
