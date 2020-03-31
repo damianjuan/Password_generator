@@ -23,11 +23,9 @@ function generatePassword(){
   //Arrays holding password elements being lazy and using split
   var lowerAlphabet = "abcdefghijklmnopqrstuvwxyz";
     lowerAlphabet = lowerAlphabet.split("");
-    console.log(lowerAlphabet);
-
+    
   var capitalAlphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     capitalAlphabet = capitalAlphabet.split("");
-    
   
   var numbers = "1234567890";
     numbers = numbers.split("");
@@ -35,26 +33,33 @@ function generatePassword(){
   var specialChar = "!@#$%^&*";
     specialChar = specialChar.split("");
 
-  var randomPassword = lowerAlphabet;
-
-  //logic to generate password based off of user's requirements 
-  if(passwordLength != null){
-        
-      if(capitalReq === true){
-        randomPassword.concat(capitalAlphabet);
-        console.log(randomPassword);
-
-      }
-      if(numberReq === true){
-    
-      }
-      if(specialCharReq === true){
-    
-      }
+  // create array with all password requirement options to random select from 
+  var randomPasswordReq = lowerAlphabet;
   
-  }else{
-    window.alert("enter a valid password length");
-  }
+  // create initial empty array to hold password
+  var password = [];
+
+  // add all character options to array to select from when randomly generating password
+    if(passwordLength != null){
+          
+        if(capitalReq === true){
+          randomPasswordReq = randomPasswordReq.concat(capitalAlphabet);
+          console.log(randomPasswordReq);
+
+        }
+        if(numberReq === true){
+          randomPasswordReq = randomPasswordReq.concat(numbers);
+          console.log(randomPasswordReq);
+      
+        }
+        if(specialCharReq === true){
+          randomPasswordReq = randomPasswordReq.concat(specialChar);
+          console.log(randomPasswordReq);
+      
+        }
+    
+    }
+  
 };
   
   
