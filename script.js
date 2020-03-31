@@ -64,15 +64,18 @@ function generatePassword(){
   for(var i = 0; i < passwordLength; i++ ){
     password[i] = randomPasswordReq[Math.floor(Math.random()*randomPasswordReq.length)];
     console.log(password);
-  
   }
   
-  
+  // need to add way to check to make sure password generated has all requirements met 
+
+  // convert password array to string so can be shown on screen
+  password = password.join("");
+  console.log(password);
+  console.log(typeof password);
 
 
 
-
-
+return password;
 };
   
   
