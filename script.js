@@ -29,16 +29,26 @@ function generatePassword(){
   var specialChar = "!@#$%^&*";
     specialChar.split();
 
+  var randomPassword = [];
+
   //logic to generate password based off of user's requirements 
   if(passwordLength != null){
-    Array.from(
-      if(capitalReq === true){
+    randomPassword.push(lowerAlphabet);
+    console.log(randomPassword);
+      
+    if(capitalReq === true){
+      randomPassword.push(capitalAlphabet);
+      console.log(randomPassword);
 
       }
       if(numberReq === true){
+        randomPassword.push(numbers);
+        console.log(randomPassword);
     
       }
       if(specialCharReq === true){
+        randomPassword.push(specialChar);
+        console.log(randomPassword);
     
       }
   
